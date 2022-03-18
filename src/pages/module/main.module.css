@@ -1,0 +1,60 @@
+html {
+    --white: #EDEDF4;
+    --dark-white: #84BCDA;
+    --blue: #2D93AD;
+    --yellow: #F2CD5D;
+    --gray: #494850;
+    --green: #61F2C2;
+    --lime: #33CA7F;
+    --red: #F37748;
+    --light-gray: #DBD2E0;
+    --purple: #C879FF;
+
+    user-select: none;
+}
+
+.wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: var(--dark-white);
+}
+
+.corner {
+    width: 20%;
+}
+
+.main {
+    width: 60%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.app {
+    height: 100%;
+    background-color: var(--white);
+    border-radius: 15px;
+    -webkit-box-shadow: 0 5px 10px 2px rgba(73, 72, 80, 0.1);
+    -moz-box-shadow: 0 5px 10px 2px rgba(73, 72, 80, 0.1);
+    box-shadow: 0 5px 10px 2px rgba(73, 72, 80, 0.1);
+}
+
+@media screen and (max-width: 479px){
+
+    .corner {
+        display: none;
+    }
+
+    .main {
+        padding: 0;
+        width: 100%;
+    }
+
+    .app {
+        background-color: var(--dark-white);
+    }
+
+    a {
+        color: var(--yellow);
+    }
+}

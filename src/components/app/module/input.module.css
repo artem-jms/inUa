@@ -1,0 +1,98 @@
+.input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    padding-left: 5px;
+    background-color: var(--dark-white);
+    color: var(--white);
+
+    -webkit-box-shadow: 0 5px 10px 2px rgba(73, 72, 80, 0.1);
+    -moz-box-shadow: 0 5px 10px 2px rgba(73, 72, 80, 0.1);
+    box-shadow: 0 5px 10px 2px rgba(73, 72, 80, 0.1);
+
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    user-select: all;
+    caret-color: var(--white);
+    position: relative;
+}
+
+.input::selection {
+    background-color: var(--white);
+}
+
+.input:focus, .input:active {
+    outline: none;
+    border: none;
+}
+
+.successful {
+    color: var(--white);
+}
+
+.unValid {
+    color: var(--red);
+    caret-color: var(--red);
+    border-left: 3px solid var(--red);
+}
+
+.unValid:focus {
+    color: var(--red);
+    caret-color: var(--red);
+    border-left: 3px solid var(--red);
+}
+
+.successful::selection {
+    color: var(--blue);
+    background-color: var(--yellow);
+}
+
+@media screen and (max-width: 479px){
+    .input {
+        color: var(--dark-white);
+        background: var(--white);
+    }
+
+    .input::selection {
+        background-color: var(--yellow);
+    }
+
+    .successful {
+        color: var(--dark-white);
+    }
+
+    .successful::selection {
+        background-color: var(--yellow);
+    }
+}
+
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}

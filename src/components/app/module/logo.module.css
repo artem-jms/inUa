@@ -1,0 +1,35 @@
+.blue {
+    color: var(--dark-white);
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+}
+
+.yellow {
+    color: var(--yellow);
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+}
+
+.dot {
+    color: var(--gray);
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+}
+
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 35px;
+}
+
+@media screen and (max-width: 479px){
+    .dot {
+        color: var(--white);
+    }
+
+    .blue {
+        color: var(--white);
+    }
+}

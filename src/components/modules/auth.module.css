@@ -1,0 +1,217 @@
+.auth {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth__active {
+    margin-top: 0;
+    height: 100%;
+    justify-content: flex-start;
+}
+
+.loader {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    transition: 1s;
+}
+
+.loader__active {
+    position: absolute;
+    height: fit-content;
+    margin: 45vh auto;
+    opacity: 1;
+    transition: 1.2s;
+    overflow: hidden;
+}
+
+.auth__form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    font-weight: 600;
+    font-size: 28px;
+    font-family: 'Nunito', sans-serif;
+    opacity: 1;
+}
+
+.auth__form__active {
+    transition: .6s;
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transform: translateY(100px);
+    user-select: none;
+    pointer-events: none;
+}
+
+
+
+.auth__form__c {
+    height: 60%;
+    width: 50%;
+    border-radius: 15px;
+}
+
+.inputs {
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.confirm__active {
+    height: 120px;
+    opacity: 1;
+    transition: .3s;
+}
+
+.confirm {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+
+.button {
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+
+    background-color: var(--white);
+    border: .1em solid var(--dark-white);
+
+    color: var(--dark-white);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 400;
+    font-family: 'Nunito', sans-serif;
+    transition: .25s;
+    min-width: fit-content;
+}
+
+.button:hover, .button:focus {
+    transition: .1s;
+    outline: none;
+    color: var(--white);
+
+    background-color: var(--dark-white);
+    border: .1em solid var(--dark-white);
+}
+
+.register {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.link {
+    cursor: pointer;
+    color: var(--dark-white);
+    transition: .3s;
+}
+
+.reg__active {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    transition: .3s;
+    height: 40px;
+    opacity: 1;
+}
+
+.reg {
+    background: transparent;
+    transition: .3s;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.reg__btn {
+    background: transparent;
+    transition: .3s;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.reg__btn__active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    transition: .3s;
+    height: 40px;
+    opacity: 1;
+}
+
+.green {
+    font-size: 30px;
+    color: var(--green);
+}
+
+@media screen and (max-width: 769px) {
+    .auth__form__c {
+        width: 90%;
+    }
+
+    .auth__form {
+        transition: .6s;
+    }
+
+    .auth__form__active {
+        transform: translateY(0);
+        margin-top: 0;
+        height: 25%;
+        transition: .6s;
+    }
+}
+
+@media screen and (max-width: 479px){
+
+    .link {
+        color: var(--yellow);
+    }
+
+    .register, .input {
+        color: var(--white);
+    }
+
+    .inputs {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .reg {
+        color: var(--white);
+    }
+
+    .reg__active {
+        color: var(--white);
+    }
+}
